@@ -12,12 +12,59 @@
   <a href="app.html">App</a>
   <a href="info.html">Om mig</a>
 </div>
-<div class="flex-container">
-    <p>Mit hus er det sejeste, og dit er ikke sejere</p>
-  <img src="hus.png" alt="et hus" width="1000" height="500">
-    
-</div>
 
-<h1>Her er mit hus</h1>
+
+<h1>Tryk på knappen nedenunder</h1>
+
+<button onclick="myFunction()">Klik mig så du sød</button>
+
+<p id="demo1"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo1").innerHTML = `
+   <button onclick="myFunctionDino()">Noget kommer nu</button>
+   `;
+}
+</script>
+
+<p id="demo2"></p>
+
+<script>
+function myFunctionDino() {
+  document.getElementById("demo2").innerHTML = `
+    <div class="flex-container1"> 
+    <p>Okay, en gang mere så kommer der noget godt</p>
+    <img src="dino.jpg" alt="en dino" width="500" height="500">
+    <button onclick="myFunctionBillede()">Sidste gang</button>
+   </div>
+   `;
+}
+</script>
+
+<p id="demo3"></p>
+
+<script>
+function myFunctionBillede() {
+  document.getElementById("demo3").innerHTML = `
+    <div class="flex-container"> 
+    <p>Mit hus der er i Paris</p>
+    <img src="hus.png" alt="et hus" width="1000" height="500">
+    <img src="pil.png" alt="en pil" width="200" height="200">
+    <button onclick="myFunctionFarve()">PRØV MIG</button>
+   </div>
+   `;
+}
+</script>
+
+
+<script>
+function myFunctionFarve() {
+  document.body.style.backgroundColor = "red";
+}
+</script>
+
+
+
 </body>
 </html>

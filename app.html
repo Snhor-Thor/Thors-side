@@ -7,12 +7,43 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+
     <div class="topnav">
   <a href="index.html">Hjem</a>
   <a class="active href="app.html">App</a>
-  <a href="info.html">Om mig</a>
+  <a href="info.html">Seje Knapper</a>
 </div>
- <h1>Prøv at se min seje app!</h1>
+<br>
+<input placeholder="prøv at skriv tekst her" name="name" />
+<br>
+<button onclick="myFunction()">Click me</button>
+<br>
+<p id="values" style="display: none;"></p>
+
+<script>
+const input = document.querySelector("input");
+const log = document.getElementById("values");
+
+input.addEventListener("input", updateValue);
+
+function updateValue(e) {
+  log.textContent = e.target.value;
+}
+</script>
+
+<script>
+function myFunction() {
+  const demo = document.getElementById("values");
+  if (demo.style.display === "none") 
+    { demo.style.display = "block";
+  } else {  
+    demo.style.display = "none";
+  }
+}
+</script>
+
+<h1>Prøv at se min seje app!</h1>
 <iframe 
   class="app-app"
   width="392" 

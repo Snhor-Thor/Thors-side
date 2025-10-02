@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="javascript.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -10,7 +11,7 @@
     <div class="topnav">
   <a href="index.html">Hjem</a>
   <a href="app.html">App</a>
-  <a class="active" href="info.html">Om mig</a>
+  <a class="active" href="info.html">Seje Knapper</a>
 </div>
 
 <button onclick="myFunction()">Click me</button>
@@ -27,5 +28,52 @@ function myFunction() {
   }
 }
 </script>
+<br>
+
+
+
+<button onclick="TalOp()">Tal Op</button>
+<button onclick="TalNed()">Tal Ned</button>
+
+<p id="demo1"></p>  
+
+
+<script>
+var count = 1;
+function TalOp() {
+  document.getElementById("demo1").innerHTML = 
+    count + 1
+   ;
+ count = count + 1
+}
+</script>
+
+<script>
+var count = 1;
+function TalNed() {
+  document.getElementById("demo1").innerHTML = 
+    count - 1
+   ;
+ count = count - 1
+}
+</script>
+
+<input placeholder="Tæl dine tegn" name="name" />
+<p id="values"></p>
+
+<script>
+const input = document.querySelector("input");
+const log = document.getElementById("values");
+
+input.addEventListener("input", updateValue);
+
+function updateValue(e) {
+  log.textContent = e.target.value.length;
+}
+</script>
+
+
+
+
 </body>
 </html>
